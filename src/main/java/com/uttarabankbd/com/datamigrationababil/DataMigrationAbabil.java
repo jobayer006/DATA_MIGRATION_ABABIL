@@ -45,9 +45,9 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
         try{
             
             Connection ababilCon=ababilConn.start();
-            ababilCon.setAutoCommit(true);
+            ababilCon.setAutoCommit(false);
             Connection chkmateCon=chkmateConn.start();
-            chkmateCon.setAutoCommit(true);
+            chkmateCon.setAutoCommit(false);
             if(ababilCon!=null && chkmateCon!=null){
                 MigrateOutwardData(ababilCon,chkmateCon);
             }
@@ -58,7 +58,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
         ababilConn.stop();
         chkmateConn.stop();
         }
-    }private static void MigrateOutwardData(Connection ababilCon,Connection chkmateCon) throws FileNotFoundException, IOException, ParseException{
+    }private static void MigrateOutwardData(Connection ababilCon,Connection chkmateCon) throws FileNotFoundException, IOException, ParseException, SQLException{
         String appPropertiesPath = "DataMigrationAbabil.properties";
 
         Properties appProps = new Properties();
@@ -150,6 +150,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        String FRONT_IMG_NAME=rs.getString("FRONT_IMG_NAME");
        String REAR_IMG_NAME=rs.getString("REAR_IMG_NAME");
        Date SCAN_DT=rs.getDate("SCAN_DT");
+       LOGGER.info(SL_NO+" : "+CHQ_NUMBER+" : "+AMOUNT_CCY);
        
        String frontImageLocation=outwardFilePath+SCAN_DT+"/"+FRONT_IMG_NAME;
        String rearImageLocation=outwardFilePath+SCAN_DT+"/"+REAR_IMG_NAME;
@@ -225,6 +226,8 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        pst4.execute();
        pst4.close();
        LOGGER.info("DATA Inserted Successfully");
+       ababilCon.commit();
+       chkmateCon.commit();
        File localfrontimageF=new File(localfrontimage);
        File localrearimageF=new File(localrearimage);
        localfrontimageF.delete();
@@ -232,6 +235,8 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        LOGGER.info("File: "+localfrontimage+ " Deleted Successfully");
         }
         }catch(Exception e){
+            ababilCon.rollback();
+            chkmateCon.rollback();
         LOGGER.error("ERROR OCCURED IN EXECUTING QUERY");
         e.printStackTrace();
         }

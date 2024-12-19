@@ -212,3 +212,20 @@
 [INFO ] 2024-12-19 16:16:11.189 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
 [INFO ] 2024-12-19 16:16:11.196 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
 [INFO ] 2024-12-19 16:16:11.196 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-19 16:41:47.909 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:41:48.003 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:41:48.005 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 16:41:55.831 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 16:41:55.839 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-09/font-T100315927AM100216689138575804250263613.tif Successfully moved toD:\TEMP\font-T100315927AM100216689138575804250263613.tif
+[INFO ] 2024-12-19 16:41:55.845 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-09/rear-T100315927AM100216689138575804250263613.tif Successfully moved toD:\TEMP\rear-T100315927AM100216689138575804250263613.tif
+[INFO ] 2024-12-19 16:41:55.845 [main] DataMigrationAbabil - FTP Connection ended
+[ERROR] 2024-12-19 16:41:55.862 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:43:16.548 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:43:16.636 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:43:16.637 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 16:43:24.044 [main] DataMigrationAbabil - 15425583 : 7009624 : 60000.0
+[INFO ] 2024-12-19 16:43:24.333 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 16:43:24.364 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-09/font-T100315927AM100216689138575804250263613.tif Successfully moved toD:\TEMP\font-T100315927AM100216689138575804250263613.tif
+[INFO ] 2024-12-19 16:43:24.370 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-09/rear-T100315927AM100216689138575804250263613.tif Successfully moved toD:\TEMP\rear-T100315927AM100216689138575804250263613.tif
+[INFO ] 2024-12-19 16:43:24.371 [main] DataMigrationAbabil - FTP Connection ended
+[ERROR] 2024-12-19 16:43:24.389 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
