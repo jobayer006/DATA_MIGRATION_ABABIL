@@ -222,7 +222,11 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        pst4.setString(1, SL_NO);
        pst4.execute();
        LOGGER.info("DATA Inserted Successfully");
-       
+       File localfrontimageF=new File(localfrontimage);
+       File localrearimageF=new File(localrearimage);
+       localfrontimageF.delete();
+       localfrontimageF.delete();
+       LOGGER.info("File: "+localfrontimage+ " Deleted Successfully");
         }
         }catch(Exception e){
         LOGGER.error("ERROR OCCURED IN EXECUTING QUERY");
