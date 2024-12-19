@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -150,12 +151,13 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        String FRONT_IMG_NAME=rs.getString("FRONT_IMG_NAME");
        String REAR_IMG_NAME=rs.getString("REAR_IMG_NAME");
        Date SCAN_DT=rs.getDate("SCAN_DT");
-       LOGGER.info(SL_NO+" : "+CHQ_NUMBER+" : "+AMOUNT_CCY);
+       LOGGER.info(SL_NO+" : "+CHQ_NUMBER+" : "+AMOUNT_CCY+" : "+FRONT_IMG_NAME);
        
        String frontImageLocation=outwardFilePath+SCAN_DT+"/"+FRONT_IMG_NAME;
        String rearImageLocation=outwardFilePath+SCAN_DT+"/"+REAR_IMG_NAME;
+       if(!(FRONT_IMG_NAME==null)||!(REAR_IMG_NAME==null)){
        downloadFile(frontImageLocation,rearImageLocation,FRONT_IMG_NAME,REAR_IMG_NAME);
-        String localfrontimage="D:\\TEMP\\"+FRONT_IMG_NAME;
+       String localfrontimage="D:\\TEMP\\"+FRONT_IMG_NAME;
         String localrearimage="D:\\TEMP\\"+REAR_IMG_NAME;
         FileInputStream frontis=new FileInputStream(new File(localfrontimage));
         FileInputStream rearis=new FileInputStream(new File(localrearimage));
@@ -195,7 +197,11 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        pst2.setString(23,PAYEEBANKRT);
        pst2.setString(24,BENFBANKRT);
        pst2.setString(25,PBM_REJECT_REASON);
+       if(MAKE_DT==null){
+       pst2.setDate(26,HOUSE_DT);
+       }else{
        pst2.setDate(26,MAKE_DT);
+       }
        pst2.setDate(27,AUTH_1ST_DT);
        pst2.setDate(28,AUTH_2ND_DT);
        pst2.setString(29,"JAVAUSER");
@@ -230,10 +236,88 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        chkmateCon.commit();
        File localfrontimageF=new File(localfrontimage);
        File localrearimageF=new File(localrearimage);
+       frontis.close();
+       rearis.close();
        localfrontimageF.delete();
-       localfrontimageF.delete();
+       localrearimageF.delete();
        LOGGER.info("File: "+localfrontimage+ " Deleted Successfully");
-        }
+       }else{
+        
+        //System.out.println(HOUSE_DT+","+MAKE_DT+","+AUTH_1ST_DT+","+AUTH_2ND_DT);
+       //System.out.println(frontImageLocation);
+       //System.out.println(rearImageLocation);
+       String query2="INSERT INTO BACH_OUTWARD_REG_HIST (SL_NO,BRANCH_ID,HOUSE_DT,TRANS_STATUS,CLR_TYPE,"
+               + "CHQ_NUMBER,PAYEE_ROUTNO,PAYEE_ACCNO,PAYEE_BANKNM,CURRENCY_CODE,EXCHANGE_RATE,"
+               + "AMOUNT_CCY,AMOUNT_LCY,CHQ_DT,TRANS_CODE,ORGN_ROUTNO,BENF_BRANCHID,BOUNCE_FLAG,"
+               + "RETURN_ID,PRESENTMENT,ITEMSEQNUM,FILENAME,PAYEEBANKRT,BENFBANKRT,PBM_REJECT_REASON,"
+               + "MAKE_DT,AUTH_1ST_DT,AUTH_2ND_DT,MAKE_BY,BUID,REVERSE_FLAG,CHARGEFLAG,AUTH_STATUS_ID) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+               
+       PreparedStatement pst2=chkmateCon.prepareStatement(query2);
+       
+       	   pst2.setString(1,SL_NO);
+       pst2.setString(2,BRANCH_ID);
+       pst2.setDate(3,HOUSE_DT);
+       pst2.setInt(4,TRANS_STATUS);
+       pst2.setString(5,CLR_TYPE);
+       pst2.setString(6,CHQ_NUMBER);
+       pst2.setString(7,PAYEE_ROUTNO);
+       pst2.setString(8,PAYEE_ACCNO);
+       pst2.setString(9,PAYEE_BANKNM);
+       pst2.setString(10,CURRENCY_CODE);
+       pst2.setInt(11,EXCHANGE_RATE);
+       pst2.setDouble(12,AMOUNT_CCY);
+       pst2.setDouble(13,AMOUNT_LCY);
+       pst2.setDate(14,CHQ_DT);
+       pst2.setString(15,TRANS_CODE);
+       pst2.setString(16,ORGN_ROUTNO);
+       pst2.setString(17,BENF_BRANCHID);
+       pst2.setInt(18,BOUNCE_FLAG);
+       pst2.setString(19,RETURN_ID);
+       pst2.setInt(20,PRESENTMENT);
+       pst2.setString(21,ITEMSEQNUM);
+       pst2.setString(22,FILENAME);
+       pst2.setString(23,PAYEEBANKRT);
+       pst2.setString(24,BENFBANKRT);
+       pst2.setString(25,PBM_REJECT_REASON);
+       if(MAKE_DT==null){
+       pst2.setDate(26,HOUSE_DT);
+       }else{
+       pst2.setDate(26,MAKE_DT);
+       }
+       pst2.setDate(27,AUTH_1ST_DT);
+       pst2.setDate(28,AUTH_2ND_DT);
+       pst2.setString(29,"JAVAUSER");
+       pst2.setString(30, "Migrated:"+SL_NO);
+       pst2.setInt(31, 0);
+       pst2.setInt(32, 1);
+       pst2.setString(33, "A");
+       pst2.execute();
+       pst2.close();
+       
+       
+       
+       String query3="INSERT INTO BACH_OUTWARD_IMG_HIST (BRANCH_ID,HOUSE_DT,IMAGE_FRONT,IMAGE_REAR,SL_NO_MAST,BUID)"
+               + " VALUES(?,?,?,?,?,?)";
+       PreparedStatement pst3=chkmateCon.prepareStatement(query3);
+       pst3.setString(1, BRANCH_ID);
+       pst3.setDate(2, HOUSE_DT);
+       pst3.setBinaryStream(3,null );
+       pst3.setBinaryStream(4, null);
+       pst3.setString(5, SL_NO);
+       pst3.setString(6, "Migrated"+SL_NO);
+       pst3.execute();
+       pst3.close();
+       
+       String query4="UPDATE ITEMINFO I SET I.IS_MIGRATED=1 WHERE I.ID=?";
+       PreparedStatement pst4=ababilCon.prepareStatement(query4);
+       pst4.setString(1, SL_NO);
+       pst4.execute();
+       pst4.close();
+       LOGGER.info("DATA Inserted Successfully");
+       ababilCon.commit();
+       chkmateCon.commit();
+       } 
+       }
         }catch(Exception e){
             ababilCon.rollback();
             chkmateCon.rollback();
