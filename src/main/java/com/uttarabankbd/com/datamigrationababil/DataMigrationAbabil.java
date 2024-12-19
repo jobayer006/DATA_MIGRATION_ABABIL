@@ -203,6 +203,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        pst2.setInt(32, 1);
        pst2.setString(33, "A");
        pst2.execute();
+       pst2.close();
        
        
        
@@ -216,11 +217,13 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        pst3.setString(5, SL_NO);
        pst3.setString(6, "Migrated"+SL_NO);
        pst3.execute();
+       pst3.close();
        
        String query4="UPDATE ITEMINFO I SET I.IS_MIGRATED=1 WHERE I.ID=?";
        PreparedStatement pst4=ababilCon.prepareStatement(query4);
        pst4.setString(1, SL_NO);
        pst4.execute();
+       pst4.close();
        LOGGER.info("DATA Inserted Successfully");
        File localfrontimageF=new File(localfrontimage);
        File localrearimageF=new File(localrearimage);
