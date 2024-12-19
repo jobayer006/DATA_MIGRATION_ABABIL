@@ -51,9 +51,9 @@
             <version>2.5</version>
         </dependency>
         <dependency>
-            <groupId>com.github.mwiede</groupId>
+            <groupId>com.jcraft</groupId>
             <artifactId>jsch</artifactId>
-            <version>0.2.20</version>
+            <version>0.1.55</version>
         </dependency>
         <dependency>
             <groupId>commons-net</groupId>

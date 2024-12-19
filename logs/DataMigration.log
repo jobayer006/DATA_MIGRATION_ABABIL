@@ -1,2 +1,214 @@
 [INFO ] 2024-12-18 10:08:21.656 [main] AbabilConnector - Ababil Database Connection Established Successfully
 [INFO ] 2024-12-18 10:08:21.819 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 11:50:07.731 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 11:50:07.840 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 11:50:07.911 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 11:50:38.151 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 11:50:38.245 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 11:50:38.308 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 11:52:42.597 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 11:52:42.687 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 11:52:42.744 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:01:10.334 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:01:10.416 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:01:10.418 [main] DataMigrationAbabil - Error Occured[Ljava.lang.StackTraceElement;@5ddf0d24
+[INFO ] 2024-12-19 12:01:41.270 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:01:41.357 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:01:41.417 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:12:29.591 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:12:29.686 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:12:29.747 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:14:53.858 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:14:53.957 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:14:54.040 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:19:52.727 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:19:52.790 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:19:52.810 [main] DataMigrationAbabil - Error Occured[Ljava.lang.StackTraceElement;@1603cd68
+[INFO ] 2024-12-19 12:23:16.621 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:23:16.720 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:23:16.788 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:24:03.255 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:24:03.354 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:24:03.418 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:27:40.374 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:27:40.455 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:27:40.456 [main] DataMigrationAbabil - Error Occured[Ljava.lang.StackTraceElement;@73cd37c0
+[INFO ] 2024-12-19 12:28:38.158 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:28:38.236 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:28:38.301 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:30:12.200 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:30:12.288 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:30:12.368 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:31:37.484 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:31:37.576 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:31:37.647 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:33:15.834 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:33:15.933 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:33:15.993 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:40:12.561 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:40:12.659 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:40:12.725 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:43:51.912 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:43:52.000 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[ERROR] 2024-12-19 12:43:52.063 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:46:00.950 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:46:01.038 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 12:49:31.082 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:49:31.171 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 12:49:31.172 [main] DataMigrationAbabil - Migrating Outward Data from '2022-06-09' to '2022-06-09'
+[ERROR] 2024-12-19 12:49:32.749 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:51:35.515 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:51:35.616 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 12:51:35.616 [main] DataMigrationAbabil - Migrating Outward Data from '2022-06-09' to '2022-06-09'
+[ERROR] 2024-12-19 12:51:35.654 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:53:09.528 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:53:09.592 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 12:53:09.607 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 12:53:11.095 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 12:54:44.996 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 12:54:45.074 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 12:54:45.088 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 14:13:50.617 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 14:13:50.724 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 14:13:50.734 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 14:19:16.346 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 14:19:16.429 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 14:19:16.430 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 14:19:51.241 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 14:19:51.347 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 14:19:51.348 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 14:41:37.935 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 14:41:38.018 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 14:41:38.037 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 14:41:45.460 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 14:43:05.565 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 14:43:05.651 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 14:43:05.652 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 14:43:13.013 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 14:44:12.927 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 14:44:13.009 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 14:44:13.010 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 14:44:23.050 [main] DataMigrationAbabil - SFTP Connection Failed with NPM
+[ERROR] 2024-12-19 14:44:23.052 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 14:45:41.919 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 14:45:42.008 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 14:45:42.009 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 14:45:52.265 [main] DataMigrationAbabil - SFTP Connection Failed with NPM
+[ERROR] 2024-12-19 14:45:52.267 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 14:57:36.587 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 14:57:36.673 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 14:57:36.674 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 14:57:46.635 [main] DataMigrationAbabil - SFTP Connection Failed with ABABIL Server
+[ERROR] 2024-12-19 14:57:46.637 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 15:23:02.766 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 15:23:02.910 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 15:23:02.923 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 15:23:10.348 [main] DataMigrationAbabil - SFTP Connection Failed with ABABIL Server
+[ERROR] 2024-12-19 15:23:10.348 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 15:24:49.545 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 15:24:49.629 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 15:24:49.630 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 15:24:57.136 [main] DataMigrationAbabil - SFTP Connection Failed with ABABIL Server
+[ERROR] 2024-12-19 15:24:57.137 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 15:30:04.393 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 15:30:04.470 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 15:30:04.471 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 15:30:11.894 [main] DataMigrationAbabil - SFTP Connection Failed with ABABIL Server
+[ERROR] 2024-12-19 15:30:11.895 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 15:33:49.382 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 15:33:49.460 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 15:33:49.461 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 15:33:56.951 [main] DataMigrationAbabil - SFTP Connection Failed with ABABIL Server
+[ERROR] 2024-12-19 15:33:56.951 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 15:38:16.548 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 15:38:16.652 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 15:38:16.653 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 15:38:24.183 [main] DataMigrationAbabil - SFTP Connection Failed with ABABIL Server
+[ERROR] 2024-12-19 15:38:24.183 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 15:39:54.753 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 15:39:54.826 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 15:39:54.828 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 15:40:02.241 [main] DataMigrationAbabil - SFTP Connection Failed with ABABIL Server
+[ERROR] 2024-12-19 15:40:02.241 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 15:43:21.375 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 15:43:21.453 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 15:43:21.454 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 15:43:28.875 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 15:45:14.735 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 15:45:14.823 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 15:45:14.824 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 15:45:22.561 [main] DataMigrationAbabil - FTP COnnection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 15:45:22.586 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 15:45:22.604 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 15:45:22.605 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-19 15:52:26.721 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 15:52:26.807 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 15:52:26.807 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 15:52:34.504 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 15:52:34.511 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 15:52:34.515 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 15:52:34.515 [main] DataMigrationAbabil - FTP Connection ended
+[ERROR] 2024-12-19 15:52:34.563 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:02:36.111 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:02:36.221 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:02:36.221 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 16:02:44.184 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 16:02:44.192 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:02:44.197 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:02:44.197 [main] DataMigrationAbabil - FTP Connection ended
+[ERROR] 2024-12-19 16:02:44.217 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:04:54.280 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:04:54.366 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:04:54.367 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 16:05:01.753 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:05:29.079 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:05:29.175 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:05:29.176 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[ERROR] 2024-12-19 16:05:36.847 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:05:56.650 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:05:56.747 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:05:56.747 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 16:06:04.446 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 16:06:04.511 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:06:04.572 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:06:04.573 [main] DataMigrationAbabil - FTP Connection ended
+[ERROR] 2024-12-19 16:06:04.592 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:10:52.846 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:10:52.932 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:10:52.932 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 16:11:00.598 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 16:11:00.620 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:11:00.643 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:11:00.643 [main] DataMigrationAbabil - FTP Connection ended
+[ERROR] 2024-12-19 16:11:00.662 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:11:32.304 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:11:32.391 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:11:32.393 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 16:11:40.079 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 16:11:40.084 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:11:40.093 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:11:40.094 [main] DataMigrationAbabil - FTP Connection ended
+[ERROR] 2024-12-19 16:11:40.112 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:12:20.987 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:12:21.071 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:12:21.071 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 16:12:28.858 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 16:12:28.879 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:12:28.887 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:12:28.887 [main] DataMigrationAbabil - FTP Connection ended
+[ERROR] 2024-12-19 16:12:29.102 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:14:32.169 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:14:32.255 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:14:32.255 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 16:14:40.122 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 16:14:40.122 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:14:40.122 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:14:40.122 [main] DataMigrationAbabil - FTP Connection ended
+[ERROR] 2024-12-19 16:14:40.175 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-19 16:16:03.292 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-19 16:16:03.382 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-19 16:16:03.383 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-19 16:16:11.162 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-19 16:16:11.189 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/font-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\font-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:16:11.196 [main] DataMigrationAbabil - /jboss/bacpsfile/outward/placement/2022-06-08/rear-T121154825PM100138008036466984250490402.tif Successfully moved toD:\TEMP\rear-T121154825PM100138008036466984250490402.tif
+[INFO ] 2024-12-19 16:16:11.196 [main] DataMigrationAbabil - FTP Connection ended
