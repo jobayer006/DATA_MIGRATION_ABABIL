@@ -7,6 +7,7 @@ package com.uttarabankbd.com.datamigrationababil;
 
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import java.io.File;
 import java.io.FileInputStream;
@@ -59,14 +60,31 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
         ababilConn.stop();
         chkmateConn.stop();
         }
-    }private static void MigrateOutwardData(Connection ababilCon,Connection chkmateCon) throws FileNotFoundException, IOException, ParseException, SQLException{
+    }private static void MigrateOutwardData(Connection ababilCon,Connection chkmateCon) throws FileNotFoundException, IOException, ParseException, SQLException, JSchException{
         String appPropertiesPath = "DataMigrationAbabil.properties";
+
 
         Properties appProps = new Properties();
         appProps.load(new FileInputStream(appPropertiesPath));
         String outwardFilePath=appProps.getProperty("outwardpath");
         String from_date=appProps.getProperty("from_date");
         String to_date=appProps.getProperty("to_date");
+        String ababil_server=appProps.getProperty("ababil_server");
+        String ababil_username=appProps.getProperty("ababil_username");
+        String ababil_password=appProps.getProperty("ababil_password");
+        int SFTPPort=22;
+        ChannelSftp channelSftp=null;    
+                  JSch jsch = new JSch();
+    //jsch.setKnownHosts("../.ssh/known_hosts");
+    Session jschSession = jsch.getSession(ababil_username, ababil_server, SFTPPort);
+    jschSession.setPassword(ababil_password);
+    jschSession.setConfig("StrictHostKeyChecking", "no");
+    jschSession.connect(2000);
+    jschSession.setConfig("kex", "diffie-hellman-group-exchange-sha256"); 
+    channelSftp =(ChannelSftp) jschSession.openChannel("sftp");
+    channelSftp.connect();
+    LOGGER.info("FTP Connection with ABABIL Server Established Successfully");
+
         
         LOGGER.info("Migrating Outward Data from "+from_date+" to "+to_date);
         //System.out.println("TO_DATE: "+to_date);
@@ -156,7 +174,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        String frontImageLocation=outwardFilePath+SCAN_DT+"/"+FRONT_IMG_NAME;
        String rearImageLocation=outwardFilePath+SCAN_DT+"/"+REAR_IMG_NAME;
        if(!(FRONT_IMG_NAME==null)||!(REAR_IMG_NAME==null)){
-       downloadFile(frontImageLocation,rearImageLocation,FRONT_IMG_NAME,REAR_IMG_NAME);
+       downloadFile(frontImageLocation,rearImageLocation,FRONT_IMG_NAME,REAR_IMG_NAME,channelSftp);
        String localfrontimage="D:\\TEMP\\"+FRONT_IMG_NAME;
         String localrearimage="D:\\TEMP\\"+REAR_IMG_NAME;
         FileInputStream frontis=new FileInputStream(new File(localfrontimage));
@@ -323,33 +341,24 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
             chkmateCon.rollback();
         LOGGER.error("ERROR OCCURED IN EXECUTING QUERY");
         e.printStackTrace();
+        }finally{
+        channelSftp.exit();
+LOGGER.info("FTP Connection ended");
         }
     }
-    private static void downloadFile(String frontImageLocation, String rearImageLocation,String frontImgName,String rearImgName) throws FileNotFoundException, IOException{
+    private static void downloadFile(String frontImageLocation, String rearImageLocation,String frontImgName,String rearImgName,ChannelSftp channelSftp) throws FileNotFoundException, IOException{
 //System.out.println(frontImageLocation+":"+rearImageLocation);
         String appPropertiesPath = "DataMigrationAbabil.properties";
 Properties appProps = new Properties();
 appProps.load(new FileInputStream(appPropertiesPath));
-String ababil_server=appProps.getProperty("ababil_server");
-String ababil_username=appProps.getProperty("ababil_username");
-String ababil_password=appProps.getProperty("ababil_password");
 
-int SFTPPort=22;
-ChannelSftp channelSftp=null;
+
 try{
-          JSch jsch = new JSch();
-    //jsch.setKnownHosts("../.ssh/known_hosts");
-    Session jschSession = jsch.getSession(ababil_username, ababil_server, SFTPPort);
-    jschSession.setPassword(ababil_password);
-    jschSession.setConfig("StrictHostKeyChecking", "no");
-    jschSession.connect(2000);
-    jschSession.setConfig("kex", "diffie-hellman-group-exchange-sha256"); 
-channelSftp =(ChannelSftp) jschSession.openChannel("sftp");
-channelSftp.connect();
-LOGGER.info("FTP Connection with ABABIL Server Established Successfully");
+
+
 String localfrontimage="D:\\TEMP\\"+frontImgName;
 String localrearimage="D:\\TEMP\\"+rearImgName;
-                    channelSftp.get(frontImageLocation, localfrontimage);
+channelSftp.get(frontImageLocation, localfrontimage);
                     
 LOGGER.info(frontImageLocation+" Successfully moved to"+localfrontimage);
 channelSftp.get(rearImageLocation, localrearimage);
@@ -358,9 +367,6 @@ LOGGER.info(rearImageLocation+" Successfully moved to"+localrearimage);
 }catch(Exception e){
 e.printStackTrace();
 LOGGER.error("SFTP Connection Failed with ABABIL Server");
-}finally{
-channelSftp.exit();
-LOGGER.info("FTP Connection ended");
 }
 }
     
