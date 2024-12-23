@@ -9,6 +9,7 @@ import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
+import com.jcraft.jsch.SftpException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -179,7 +180,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        String AUTH_STATUS_ID=rs.getString("AUTH_STATUS_ID");
        String BUID=rs.getString("BUID");
        int REVERSE_FLAG=rs.getInt("REVERSE_FLAG");
-       LOGGER.info(SL_NO+" : "+CHQ_NUMBER+" : "+AMOUNT_CCY+" : "+FRONT_IMG_NAME);
+       LOGGER.info(SL_NO+" : "+CHQ_NUMBER+" : "+AMOUNT_CCY+" : "+FRONT_IMG_NAME+" : "+HOUSE_DT+" : "+SCAN_DT);
        
        String frontImageLocation=inwardFilePath+SCAN_DT+"/image/"+FRONT_IMG_NAME;
        String rearImageLocation=inwardFilePath+SCAN_DT+"/image/"+REAR_IMG_NAME;
@@ -392,7 +393,7 @@ LOGGER.info("FTP Connection ended");
 
         Properties appProps = new Properties();
         appProps.load(new FileInputStream(appPropertiesPath));
-        String outwardFilePath=appProps.getProperty("inwardpath");
+        String outwardFilePath=appProps.getProperty("outwardpath");
         String from_date=appProps.getProperty("from_date");
         String to_date=appProps.getProperty("to_date");
         String ababil_server=appProps.getProperty("ababil_server");
@@ -450,7 +451,7 @@ LOGGER.info("FTP Connection ended");
 "       t.itemtrantime AUTH_2ND_DT,\n" +
 "       m.fontimagename FRONT_IMG_NAME,\n" +
 "       m.rearimagename REAR_IMG_NAME,\n" +
-"       m.entrydate SCAN_DT\n" +
+"       m.housedate SCAN_DT\n" +
 "  from iteminfo t\n" +
 "  full join makerinfo m on m.id=t.makerinfoid\n" +
 "  full join bank_branches b on b.id=m.scanningbranch_id \n" +
@@ -497,7 +498,7 @@ LOGGER.info("FTP Connection ended");
        String FRONT_IMG_NAME=rs.getString("FRONT_IMG_NAME");
        String REAR_IMG_NAME=rs.getString("REAR_IMG_NAME");
        Date SCAN_DT=rs.getDate("SCAN_DT");
-       LOGGER.info(SL_NO+" : "+CHQ_NUMBER+" : "+AMOUNT_CCY+" : "+FRONT_IMG_NAME);
+       LOGGER.info(SL_NO+" : "+CHQ_NUMBER+" : "+AMOUNT_CCY+" : "+FRONT_IMG_NAME+" : "+HOUSE_DT+" : "+SCAN_DT);
        
        String frontImageLocation=outwardFilePath+SCAN_DT+"/"+FRONT_IMG_NAME;
        String rearImageLocation=outwardFilePath+SCAN_DT+"/"+REAR_IMG_NAME;
@@ -677,37 +678,35 @@ LOGGER.info("FTP Connection ended");
     LOGGER.info("Outward Data Migration is set to OFF Status");
     }
     }
-    private static void downloadFile(String remotefrontImageLocation, String remoterearImageLocation,String frontImgName,String rearImgName,ChannelSftp channelSftp,boolean isOutward) throws FileNotFoundException, IOException{
+    private static void downloadFile(String remotefrontImageLocation, String remoterearImageLocation,String frontImgName,String rearImgName,ChannelSftp channelSftp,boolean isOutward) throws FileNotFoundException, IOException, SftpException{
 //System.out.println(frontImageLocation+":"+rearImageLocation);
         String appPropertiesPath = "DataMigrationAbabil.properties";
 Properties appProps = new Properties();
 appProps.load(new FileInputStream(appPropertiesPath));
-
-if(isOutward){
-try{
 String localfrontimage="D:\\TEMP\\"+frontImgName;
 String localrearimage="D:\\TEMP\\"+rearImgName;
-channelSftp.get(remotefrontImageLocation, localfrontimage);
+if(isOutward){
+try{
 
-File front=new File(localfrontimage);
-if(!front.exists()){
-    LOGGER.info("Remote File Not Found! So, Trying to Read from Alternate Location");
-remotefrontImageLocation=remotefrontImageLocation.replace("placement", "verify");
-remoterearImageLocation=remoterearImageLocation.replace("placement", "verify");
 channelSftp.get(remotefrontImageLocation, localfrontimage);
-}
 LOGGER.info(remotefrontImageLocation+" Successfully moved to"+localfrontimage);
 channelSftp.get(remoterearImageLocation, localrearimage);
 LOGGER.info(remoterearImageLocation+" Successfully moved to"+localrearimage);
 
 }catch(Exception e){
-e.printStackTrace();
+if(isOutward){
+LOGGER.info("Remote File Not Found! So, Trying to Read from Alternate Location");
+remotefrontImageLocation=remotefrontImageLocation.replace("placement", "verify");
+remoterearImageLocation=remoterearImageLocation.replace("placement", "verify");
+System.out.println(remotefrontImageLocation);
+channelSftp.get(remotefrontImageLocation, localfrontimage);
+}
+
 LOGGER.error("SFTP Connection Failed with ABABIL Server");
 }
 }else{
 try{
-String localfrontimage="D:\\TEMP\\"+frontImgName;
-String localrearimage="D:\\TEMP\\"+rearImgName;
+
 channelSftp.get(remotefrontImageLocation, localfrontimage);
 LOGGER.info(remotefrontImageLocation+" Successfully moved to"+localfrontimage);
 channelSftp.get(remoterearImageLocation, localrearimage);

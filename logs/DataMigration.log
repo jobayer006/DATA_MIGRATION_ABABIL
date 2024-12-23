@@ -8042,3 +8042,96 @@
 [INFO ] 2024-12-23 10:19:53.721 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
 [INFO ] 2024-12-23 10:19:53.896 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
 [INFO ] 2024-12-23 10:19:53.897 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
+[INFO ] 2024-12-23 10:29:09.199 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 10:29:09.282 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 10:29:09.567 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 10:29:09.569 [main] DataMigrationAbabil - Migrating Outward Data from '09jun2022' to '09jun2022'
+[INFO ] 2024-12-23 10:29:16.004 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-23 10:29:16.091 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 10:29:16.144 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 10:29:16.319 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 10:29:16.320 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
+[INFO ] 2024-12-23 10:29:35.996 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 10:29:36.082 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 10:29:36.382 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 10:29:36.384 [main] DataMigrationAbabil - Migrating Outward Data from '01jan2021' to '09jun2022'
+[INFO ] 2024-12-23 10:29:42.251 [main] DataMigrationAbabil - 13930483 : 9412095 : 12558.0 : font-T154558052PM55741251263668585250273887.tif
+[INFO ] 2024-12-23 10:29:42.255 [main] DataMigrationAbabil - Remote File Not Found! So, Trying to Read from Alternate Location
+[ERROR] 2024-12-23 10:29:42.258 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-23 10:29:42.259 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-23 10:29:42.519 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 10:29:42.574 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 10:29:42.755 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 10:29:42.755 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
+[INFO ] 2024-12-23 11:09:00.916 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:09:00.996 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:09:01.277 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:09:01.279 [main] DataMigrationAbabil - Migrating Outward Data from '01jan2021' to '09jun2022'
+[INFO ] 2024-12-23 11:09:06.384 [main] DataMigrationAbabil - 13930483 : 9412095 : 12558.0 : font-T154558052PM55741251263668585250273887.tif
+[INFO ] 2024-12-23 11:09:06.409 [main] DataMigrationAbabil - Remote File Not Found! So, Trying to Read from Alternate Location
+[ERROR] 2024-12-23 11:09:06.421 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-23 11:09:06.422 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-23 11:09:06.680 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:09:06.737 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:09:06.911 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:09:06.912 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
+[INFO ] 2024-12-23 11:10:52.687 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:10:52.775 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:10:53.054 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:10:53.055 [main] DataMigrationAbabil - Migrating Outward Data from '01jan2021' to '09jun2022'
+[INFO ] 2024-12-23 11:10:59.142 [main] DataMigrationAbabil - 13930483 : 9412095 : 12558.0 : font-T154558052PM55741251263668585250273887.tif
+[INFO ] 2024-12-23 11:10:59.148 [main] DataMigrationAbabil - Remote File Not Found! So, Trying to Read from Alternate Location
+[ERROR] 2024-12-23 11:10:59.150 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-23 11:10:59.151 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-23 11:10:59.317 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:10:59.377 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:10:59.548 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:10:59.548 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
+[INFO ] 2024-12-23 11:11:33.461 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:11:33.537 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:11:33.816 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:11:33.817 [main] DataMigrationAbabil - Migrating Outward Data from '01jan2021' to '09jun2022'
+[INFO ] 2024-12-23 11:11:39.808 [main] DataMigrationAbabil - 13930483 : 9412095 : 12558.0 : font-T154558052PM55741251263668585250273887.tif
+[INFO ] 2024-12-23 11:11:39.813 [main] DataMigrationAbabil - Remote File Not Found! So, Trying to Read from Alternate Location
+[ERROR] 2024-12-23 11:11:39.815 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-23 11:11:39.816 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-23 11:11:40.092 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:11:40.169 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:11:40.358 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:11:40.358 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
+[INFO ] 2024-12-23 11:12:34.192 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:12:34.272 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:12:34.571 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:12:34.579 [main] DataMigrationAbabil - Migrating Outward Data from '01jan2021' to '09jun2022'
+[INFO ] 2024-12-23 11:12:39.776 [main] DataMigrationAbabil - 13930483 : 9412095 : 12558.0 : font-T154558052PM55741251263668585250273887.tif
+[INFO ] 2024-12-23 11:12:39.780 [main] DataMigrationAbabil - Remote File Not Found! So, Trying to Read from Alternate Location
+[ERROR] 2024-12-23 11:12:39.782 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-23 11:12:39.782 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-23 11:12:39.934 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:12:39.994 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:12:40.155 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:12:40.171 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
+[INFO ] 2024-12-23 11:15:32.352 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:15:32.447 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:15:32.735 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:15:32.737 [main] DataMigrationAbabil - Migrating Outward Data from '01jan2021' to '09jun2022'
+[INFO ] 2024-12-23 11:15:38.848 [main] DataMigrationAbabil - 13930483 : 9412095 : 12558.0 : font-T154558052PM55741251263668585250273887.tif
+[INFO ] 2024-12-23 11:15:38.856 [main] DataMigrationAbabil - Remote File Not Found! So, Trying to Read from Alternate Location
+[ERROR] 2024-12-23 11:15:38.860 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-23 11:15:38.860 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-23 11:15:39.022 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:15:39.082 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:15:39.275 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:15:39.275 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
+[INFO ] 2024-12-23 11:16:44.460 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:16:44.556 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:16:44.843 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:16:44.844 [main] DataMigrationAbabil - Migrating Outward Data from '01jan2021' to '09jun2022'
+[INFO ] 2024-12-23 11:16:49.906 [main] DataMigrationAbabil - 13930483 : 9412095 : 12558.0 : font-T154558052PM55741251263668585250273887.tif : 2021-01-11 : 2021-01-10
+[INFO ] 2024-12-23 11:16:49.910 [main] DataMigrationAbabil - Remote File Not Found! So, Trying to Read from Alternate Location
+[ERROR] 2024-12-23 11:16:49.913 [main] DataMigrationAbabil - ERROR OCCURED IN EXECUTING QUERY
+[INFO ] 2024-12-23 11:16:49.913 [main] DataMigrationAbabil - FTP Connection ended
+[INFO ] 2024-12-23 11:16:50.098 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 11:16:50.150 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 11:16:50.335 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 11:16:50.335 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
