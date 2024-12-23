@@ -87,7 +87,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
     channelSftp =(ChannelSftp) jschSession.openChannel("sftp");
     channelSftp.connect();
     LOGGER.info("FTP Connection with ABABIL Server Established Successfully");
-    if(inward_status.toUpperCase()=="ON"){
+    if((inward_status.toUpperCase()).equals("ON")){
         
     LOGGER.info("Migrating Inward Data from "+from_date+" to "+to_date);
     
@@ -399,6 +399,7 @@ LOGGER.info("FTP Connection ended");
         String ababil_username=appProps.getProperty("ababil_username");
         String ababil_password=appProps.getProperty("ababil_password");
         String outward_status=appProps.getProperty("outward_status");
+        
         int SFTPPort=22;
         ChannelSftp channelSftp=null;    
                   JSch jsch = new JSch();
@@ -411,7 +412,7 @@ LOGGER.info("FTP Connection ended");
     channelSftp =(ChannelSftp) jschSession.openChannel("sftp");
     channelSftp.connect();
     LOGGER.info("FTP Connection with ABABIL Server Established Successfully");
-    if(outward_status.toUpperCase()=="ON"){
+    if((outward_status.toUpperCase()).equals("ON")){
         
         LOGGER.info("Migrating Outward Data from "+from_date+" to "+to_date);
         //System.out.println("TO_DATE: "+to_date);

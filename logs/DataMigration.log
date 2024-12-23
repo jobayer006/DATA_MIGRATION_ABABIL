@@ -8034,3 +8034,11 @@
 [INFO ] 2024-12-19 17:23:59.064 [main] DataMigrationAbabil - FTP Connection ended
 [INFO ] 2024-12-19 17:23:59.088 [main] DataMigrationAbabil - DATA Inserted Successfully
 [INFO ] 2024-12-19 17:23:59.114 [main] DataMigrationAbabil - File: D:\TEMP\font-T123123585PM100225576796642963250390852.tif Deleted Successfully
+[INFO ] 2024-12-23 10:19:53.189 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 10:19:53.285 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 10:19:53.557 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 10:19:53.557 [main] DataMigrationAbabil - Outward Data Migration is set to OFF Status
+[INFO ] 2024-12-23 10:19:53.665 [main] AbabilConnector - Ababil Database Connection Established Successfully
+[INFO ] 2024-12-23 10:19:53.721 [main] ChequemateConnector - ChequeMate DB Connection Established Successfully
+[INFO ] 2024-12-23 10:19:53.896 [main] DataMigrationAbabil - FTP Connection with ABABIL Server Established Successfully
+[INFO ] 2024-12-23 10:19:53.897 [main] DataMigrationAbabil - Inward Data Migration Status is set to OFF
