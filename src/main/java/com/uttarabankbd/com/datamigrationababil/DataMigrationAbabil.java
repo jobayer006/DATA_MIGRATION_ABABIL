@@ -129,15 +129,17 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
 "       'A' AUTH_STATUS_ID,\n" +
 "       'MigrationData'|| t.id BUID,\n" +
 "       0 REVERSE_FLAG,\n" +
-"       (select dt.imagename from imagedetail dt where dt.item_id = t.id and dt.viewsideindicator =0) FRONT_IMG_NAME,\n" +
-"       (select dt.imagename from imagedetail dt where dt.item_id = t.id and dt.viewsideindicator =1) REAR_IMG_NAME,\n" +
+"       dt.imagename FRONT_IMG_NAME,\n" +
+"       (select imagename from imagedetail dtt where dtt.viewsideindicator=1 and dtt.item_id=t.id)REAR_IMG_NAME,\n" +
 "       t.itemcreationdate CREATION_DT\n" +
 "  from iteminfo t\n" +
 "  full join fileinfo f on t.fileinfo_id=f.id\n" +
 "  full join return_reason rr on rr.id=t.returnreason_id\n" +
+"  full join imagedetail dt on dt.item_id=t.id\n" +
 " where t.Ecesettlementdate between  ? and ? \n" +
 " and t.itemvalue_ecetype_id in (1,2)\n" +
-" and t.is_migrated=0";
+" and t.is_migrated=0\n" +
+" and dt.viewsideindicator=0";
         
         try{
         PreparedStatement pst=ababilCon.prepareStatement(query);
@@ -451,7 +453,7 @@ LOGGER.info("FTP Connection ended");
 "       t.itemtrantime AUTH_2ND_DT,\n" +
 "       m.fontimagename FRONT_IMG_NAME,\n" +
 "       m.rearimagename REAR_IMG_NAME,\n" +
-"       m.housedate SCAN_DT\n" +
+"       m.housedateFR SCAN_DT\n" +
 "  from iteminfo t\n" +
 "  full join makerinfo m on m.id=t.makerinfoid\n" +
 "  full join bank_branches b on b.id=m.scanningbranch_id \n" +
