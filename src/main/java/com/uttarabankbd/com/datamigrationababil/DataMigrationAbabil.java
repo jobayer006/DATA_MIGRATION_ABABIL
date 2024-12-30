@@ -92,55 +92,109 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
         
     LOGGER.info("Migrating Inward Data from "+from_date+" to "+to_date);
     
-    String query="select t.id                SL_NO,\n" +
-"       t.branchcode        BRANCH_ID,\n" +
-"       t.ecesettlementdate HOUSE_DT,\n" +
-"       case when t.verifystatus in (0,1) then 2\n" +
-"         when t.verifystatus in (2,3) then 3\n" +
-"           else 0 end as TRANS_STATUS,\n" +
-"       case when t.itemvalue_ecetype_id=2 then '19'\n" +
-"         else '11' end as CLR_TYPE,\n" +
-"       t.chequesequencenumber CHQ_NUMBER,\n" +
-"       t.issuingbranchroutingnumber PAYEE_ROUTNO,\n" +
-"       t.branchcode PAYEE_BR_ID,\n" +
-"       substr(t.accountnumber,3,13) PAYEE_ACCNO,\n" +
-"       'BDT' CURRENCY_CODE,\n" +
-"       1.0000 EXCHANGE_RATE,\n" +
-"       '' EXCHANGE_RATE_ID,\n" +
-"       t.itemamount AMOUNT_CCY,\n" +
-"       t.itemamount AMOUNT_LCY,\n" +
-"       t.trancode TRANS_CODE,\n" +
-"       f.returnlocationroutingnumber BENF_ROUTNO,\n" +
-"       case when rr.code is null then 0 \n" +
-"         else 1 end as RETURN_FLAG,\n" +
-"       rr.code RETURN_ID,\n" +
-"       'N' ECE_TYPE,\n" +
-"       t.eceinstitutionitemseqnumber ITEMSEQNUM,\n" +
-"       f.cashletterid CASHLETTER_ID,\n" +
-"       f.eceinstitutionroutingnumber ECEINSTITUTE_RTNO,\n" +
-"       f.returnlocationroutingnumber RETURN_BR_RT,\n" +
-"       f.filename FILENAME,\n" +
-"       t.representmentindicator PRESENTMENT,\n" +
-"       t.accountnumber ACTUAL_PAYEE_ACCNO,\n" +
-"       t.chequesequencenumber ACTUAL_CHQ_NUMBER,\n" +
-"       'JAVAUSER' MAKE_BY,\n" +
-"       t.ecesettlementtime MAKE_DT,\n" +
-"       'JAVAUSER' AUTH_1ST_BY,\n" +
-"       t.ecesettlementtime AUTH_1ST_DT,\n" +
-"       'A' AUTH_STATUS_ID,\n" +
-"       'MigrationData'|| t.id BUID,\n" +
-"       0 REVERSE_FLAG,\n" +
-"       dt.imagename FRONT_IMG_NAME,\n" +
-"       --(select imagename from imagedetail dtt where dtt.viewsideindicator=1 and dtt.item_id=t.id)REAR_IMG_NAME,\n" +
-"       t.itemcreationdate CREATION_DT\n" +
-"  from iteminfo t\n" +
-"  full join fileinfo f on t.fileinfo_id=f.id\n" +
-"  full join return_reason rr on rr.id=t.returnreason_id\n" +
-"  full join imagedetail dt on dt.item_id=t.id\n" +
-" where t.Ecesettlementdate between  "+from_date+" and "+to_date +"\n" +
-" and t.itemvalue_ecetype_id in (1,2)\n" +
-" and t.is_migrated=0\n" +
-" and dt.viewsideindicator=0 order by t.ecesettlementdate";
+    String query="select tbl.SL_NO,\n" +
+"       tbl.BRANCH_ID,\n" +
+"       tbl.HOUSE_DT,\n" +
+"       tbl.TRANS_STATUS,\n" +
+"       tbl.CLR_TYPE,\n" +
+"       tbl.CHQ_NUMBER,\n" +
+"       tbl.PAYEE_ROUTNO,\n" +
+"       tbl.PAYEE_BR_ID,\n" +
+"       tbl.PAYEE_ACCNO,\n" +
+"       tbl.CURRENCY_CODE,\n" +
+"       tbl.EXCHANGE_RATE,\n" +
+"       tbl.AMOUNT_CCY,\n" +
+"       tbl.AMOUNT_LCY,\n" +
+"       tbl.TRANS_CODE,\n" +
+"       tbl.BENF_ROUTNO,\n" +
+"       tbl.RETURN_FLAG,\n" +
+"       tbl.RETURN_ID,\n" +
+"       tbl.ECE_TYPE,\n" +
+"       tbl.ITEMSEQNUM,\n" +
+"       tbl.CASHLETTER_ID,\n" +
+"       tbl.ECEINSTITUTE_RTNO,\n" +
+"       tbl.RETURN_BR_RT,\n" +
+"       tbl.FILENAME,\n" +
+"       tbl.PRESENTMENT,\n" +
+"       tbl.ACTUAL_PAYEE_ACCNO,\n" +
+"       tbl.ACTUAL_CHQ_NUMBER,\n" +
+"       tbl.MAKE_BY,\n" +
+"       tbl.MAKE_DT,\n" +
+"       tbl.AUTH_1ST_BY,\n" +
+"       tbl.AUTH_1ST_DT,\n" +
+"       tbl.AUTH_STATUS_ID,\n" +
+"       tbl.BUID,\n" +
+"       tbl.REVERSE_FLAG,\n" +
+"       tbl.FRONT_IMG_NAME,\n" +
+"       idt.imagename REAR_IMG_NAME,\n" +
+"       tbl.CREATION_DT\n" +
+"  from (select t.id SL_NO,\n" +
+"               t.branchcode BRANCH_ID,\n" +
+"               t.ecesettlementdate HOUSE_DT,\n" +
+"               case\n" +
+"                 when t.verifystatus in (0, 1) then\n" +
+"                  2\n" +
+"                 when t.verifystatus in (2, 3) then\n" +
+"                  3\n" +
+"                 else\n" +
+"                  0\n" +
+"               end as TRANS_STATUS,\n" +
+"               case\n" +
+"                 when t.itemvalue_ecetype_id = 2 then\n" +
+"                  '19'\n" +
+"                 else\n" +
+"                  '11'\n" +
+"               end as CLR_TYPE,\n" +
+"               t.chequesequencenumber CHQ_NUMBER,\n" +
+"               t.issuingbranchroutingnumber PAYEE_ROUTNO,\n" +
+"               t.branchcode PAYEE_BR_ID,\n" +
+"               substr(t.accountnumber, 3, 13) PAYEE_ACCNO,\n" +
+"               'BDT' CURRENCY_CODE,\n" +
+"               1.0000 EXCHANGE_RATE,\n" +
+"               '' EXCHANGE_RATE_ID,\n" +
+"               t.itemamount AMOUNT_CCY,\n" +
+"               t.itemamount AMOUNT_LCY,\n" +
+"               t.trancode TRANS_CODE,\n" +
+"               f.returnlocationroutingnumber BENF_ROUTNO,\n" +
+"               case\n" +
+"                 when rr.code is null then\n" +
+"                  0\n" +
+"                 else\n" +
+"                  1\n" +
+"               end as RETURN_FLAG,\n" +
+"               rr.code RETURN_ID,\n" +
+"               'N' ECE_TYPE,\n" +
+"               t.eceinstitutionitemseqnumber ITEMSEQNUM,\n" +
+"               f.cashletterid CASHLETTER_ID,\n" +
+"               f.eceinstitutionroutingnumber ECEINSTITUTE_RTNO,\n" +
+"               f.returnlocationroutingnumber RETURN_BR_RT,\n" +
+"               f.filename FILENAME,\n" +
+"               t.representmentindicator PRESENTMENT,\n" +
+"               t.accountnumber ACTUAL_PAYEE_ACCNO,\n" +
+"               t.chequesequencenumber ACTUAL_CHQ_NUMBER,\n" +
+"               'JAVAUSER' MAKE_BY,\n" +
+"               t.ecesettlementtime MAKE_DT,\n" +
+"               'JAVAUSER' AUTH_1ST_BY,\n" +
+"               t.ecesettlementtime AUTH_1ST_DT,\n" +
+"               'A' AUTH_STATUS_ID,\n" +
+"               'MigrationData' || t.id BUID,\n" +
+"               0 REVERSE_FLAG,\n" +
+"               dt.imagename FRONT_IMG_NAME,\n" +
+"               t.itemcreationdate CREATION_DT\n" +
+"          from iteminfo t\n" +
+"          full join fileinfo f\n" +
+"            on t.fileinfo_id = f.id\n" +
+"          full join return_reason rr\n" +
+"            on rr.id = t.returnreason_id\n" +
+"          full join imagedetail dt\n" +
+"            on dt.item_id = t.id\n" +
+"         where t.Ecesettlementdate between "+from_date+" and "+to_date+ "\n" +
+"           and t.itemvalue_ecetype_id in (1, 2)\n" +
+"           and t.is_migrated = 0\n" +
+"           and dt.viewsideindicator = 0) tbl,\n" +
+"       imagedetail idt\n" +
+" where idt.viewsideindicator = 1\n" +
+"   and idt.item_id = tbl.SL_NO;";
         
         try{
         PreparedStatement pst=ababilCon.prepareStatement(query);
@@ -179,23 +233,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        String AUTH_1ST_BY=rs.getString("AUTH_1ST_BY");
        Date AUTH_1ST_DT=rs.getDate("AUTH_1ST_DT");
        String FRONT_IMG_NAME=rs.getString("FRONT_IMG_NAME");//*******For file copy
-       String frimgnm=FRONT_IMG_NAME.replace(".tif", "");
-       String REAR_IMG_NAME="";
-       String lastchar=frimgnm.substring(frimgnm.length()-2, frimgnm.length());
-       System.out.println("Lastchar:"+lastchar);
-       try{
-       int lastnum=Integer.parseInt(lastchar);
-       lastnum=lastnum+1;
-       REAR_IMG_NAME=frimgnm.substring(0,frimgnm.length()-2)+lastnum+".tif";
-       System.out.println();
-       }catch(Exception e){
-           lastchar=frimgnm.substring(frimgnm.length()-1, frimgnm.length());
-           int num=Integer.parseInt(lastchar)+1;
-       REAR_IMG_NAME=frimgnm.substring(0,frimgnm.length()-1)+num+".tif";
-       
-       }
-       System.out.println(REAR_IMG_NAME);
-       //String REAR_IMG_NAME=rs.getString("REAR_IMG_NAME");//*****For file copy
+       String REAR_IMG_NAME=rs.getString("REAR_IMG_NAME");//*****For file copy
        Date SCAN_DT=rs.getDate("CREATION_DT");//******For file copy
        String AUTH_STATUS_ID=rs.getString("AUTH_STATUS_ID");
        String BUID=rs.getString("BUID");
