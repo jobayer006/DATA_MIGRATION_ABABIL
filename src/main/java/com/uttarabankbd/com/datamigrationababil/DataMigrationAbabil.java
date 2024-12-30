@@ -98,7 +98,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
 "       case when t.verifystatus in (0,1) then 2\n" +
 "         when t.verifystatus in (2,3) then 3\n" +
 "           else 0 end as TRANS_STATUS,\n" +
-"       case when t.itemvalue_ecetype_id=1 then '19'\n" +
+"       case when t.itemvalue_ecetype_id=2 then '19'\n" +
 "         else '11' end as CLR_TYPE,\n" +
 "       t.chequesequencenumber CHQ_NUMBER,\n" +
 "       t.issuingbranchroutingnumber PAYEE_ROUTNO,\n" +
