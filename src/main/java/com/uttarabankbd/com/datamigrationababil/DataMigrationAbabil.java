@@ -111,7 +111,8 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
 "       t.itemamount AMOUNT_LCY,\n" +
 "       t.trancode TRANS_CODE,\n" +
 "       f.returnlocationroutingnumber BENF_ROUTNO,\n" +
-"       1 RETURN_FLAG,\n" +
+"       case when rr.code is null then 0 \n" +
+"         else 1 end as RETURN_FLAG,\n" +
 "       rr.code RETURN_ID,\n" +
 "       'N' ECE_TYPE,\n" +
 "       t.eceinstitutionitemseqnumber ITEMSEQNUM,\n" +
