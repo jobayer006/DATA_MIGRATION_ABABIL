@@ -194,7 +194,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
 "           and dt.viewsideindicator = 0) tbl,\n" +
 "       imagedetail idt\n" +
 " where idt.viewsideindicator = 1\n" +
-"   and idt.item_id = tbl.SL_NO;";
+"   and idt.item_id = tbl.SL_NO";
         
         try{
         PreparedStatement pst=ababilCon.prepareStatement(query);
