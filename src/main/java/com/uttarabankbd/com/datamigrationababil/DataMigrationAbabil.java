@@ -123,26 +123,27 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
 "       t.accountnumber ACTUAL_PAYEE_ACCNO,\n" +
 "       t.chequesequencenumber ACTUAL_CHQ_NUMBER,\n" +
 "       'JAVAUSER' MAKE_BY,\n" +
-"       t.ecesettlementtime AUTH_1ST_DT,\n" +
+"       t.ecesettlementtime MAKE_DT,\n" +
 "       'JAVAUSER' AUTH_1ST_BY,\n" +
 "       t.ecesettlementtime AUTH_1ST_DT,\n" +
 "       'A' AUTH_STATUS_ID,\n" +
 "       'MigrationData'|| t.id BUID,\n" +
 "       0 REVERSE_FLAG,\n" +
 "       dt.imagename FRONT_IMG_NAME,\n" +
-"       (select imagename from imagedetail dtt where dtt.viewsideindicator=1 and dtt.item_id=t.id)REAR_IMG_NAME,\n" +
+"       --(select imagename from imagedetail dtt where dtt.viewsideindicator=1 and dtt.item_id=t.id)REAR_IMG_NAME,\n" +
 "       t.itemcreationdate CREATION_DT\n" +
 "  from iteminfo t\n" +
 "  full join fileinfo f on t.fileinfo_id=f.id\n" +
 "  full join return_reason rr on rr.id=t.returnreason_id\n" +
 "  full join imagedetail dt on dt.item_id=t.id\n" +
-" where t.Ecesettlementdate between  ? and ? \n" +
+" where t.Ecesettlementdate between  "+from_date+" and "+to_date +"\n" +
 " and t.itemvalue_ecetype_id in (1,2)\n" +
 " and t.is_migrated=0\n" +
-" and dt.viewsideindicator=0";
+" and dt.viewsideindicator=0 order by t.ecesettlementdate";
         
         try{
         PreparedStatement pst=ababilCon.prepareStatement(query);
+        
         ResultSet rs=pst.executeQuery();
         while(rs.next()){
             String SL_NO=rs.getString("SL_NO");
@@ -171,13 +172,29 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        String RETURN_BR_RT=rs.getString("RETURN_BR_RT");
        String FILENAME=rs.getString("FILENAME");
        String ACTUAL_PAYEE_ACCNO=rs.getString("ACTUAL_PAYEE_ACCNO");
-       String ACTUAL_CHQ_NUMBER=rs.getString("ACTUAL_CHQ_NUMEBR");
+       String ACTUAL_CHQ_NUMBER=rs.getString("ACTUAL_CHQ_NUMBER");
        String MAKE_BY=rs.getString("MAKE_BY");
        Date MAKE_DT=rs.getDate("MAKE_DT");
-       String AUTH_1ST_BY=rs.getString("AUTH_1ST-BY");
+       String AUTH_1ST_BY=rs.getString("AUTH_1ST_BY");
        Date AUTH_1ST_DT=rs.getDate("AUTH_1ST_DT");
        String FRONT_IMG_NAME=rs.getString("FRONT_IMG_NAME");//*******For file copy
-       String REAR_IMG_NAME=rs.getString("REAR_IMG_NAME");//*****For file copy
+       String frimgnm=FRONT_IMG_NAME.replace(".tif", "");
+       String REAR_IMG_NAME="";
+       String lastchar=frimgnm.substring(frimgnm.length()-2, frimgnm.length());
+       System.out.println("Lastchar:"+lastchar);
+       try{
+       int lastnum=Integer.parseInt(lastchar);
+       lastnum=lastnum+1;
+       REAR_IMG_NAME=frimgnm.substring(0,frimgnm.length()-2)+lastnum+".tif";
+       System.out.println();
+       }catch(Exception e){
+           lastchar=frimgnm.substring(frimgnm.length()-1, frimgnm.length());
+           int num=Integer.parseInt(lastchar)+1;
+       REAR_IMG_NAME=frimgnm.substring(0,frimgnm.length()-1)+num+".tif";
+       
+       }
+       System.out.println(REAR_IMG_NAME);
+       //String REAR_IMG_NAME=rs.getString("REAR_IMG_NAME");//*****For file copy
        Date SCAN_DT=rs.getDate("CREATION_DT");//******For file copy
        String AUTH_STATUS_ID=rs.getString("AUTH_STATUS_ID");
        String BUID=rs.getString("BUID");
@@ -453,7 +470,7 @@ LOGGER.info("FTP Connection ended");
 "       t.itemtrantime AUTH_2ND_DT,\n" +
 "       m.fontimagename FRONT_IMG_NAME,\n" +
 "       m.rearimagename REAR_IMG_NAME,\n" +
-"       m.housedateFR SCAN_DT\n" +
+"       m.housedate SCAN_DT\n" +
 "  from iteminfo t\n" +
 "  full join makerinfo m on m.id=t.makerinfoid\n" +
 "  full join bank_branches b on b.id=m.scanningbranch_id \n" +
