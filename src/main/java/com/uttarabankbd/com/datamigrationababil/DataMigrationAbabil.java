@@ -261,7 +261,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
                
        PreparedStatement pst2=chkmateCon.prepareStatement(query2);
        
-       	   pst2.setString(1,SL_NO);
+       	   pst2.setString(1,"111111"+SL_NO);
        pst2.setString(2,BRANCH_ID);
        pst2.setDate(3,HOUSE_DT);
        pst2.setInt(4,TRANS_STATUS);
@@ -313,7 +313,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        pst3.setDate(2, HOUSE_DT);
        pst3.setBinaryStream(3,frontis );
        pst3.setBinaryStream(4, rearis);
-       pst3.setString(5, SL_NO);
+       pst3.setString(5, "111111"+SL_NO);
        pst3.setString(6, BUID);
        pst3.execute();
        pst3.close();
@@ -348,7 +348,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
                
        PreparedStatement pst2=chkmateCon.prepareStatement(query2);
        
-       	   pst2.setString(1,SL_NO);
+       	   pst2.setString(1,"111111"+SL_NO);
        pst2.setString(2,BRANCH_ID);
        pst2.setDate(3,HOUSE_DT);
        pst2.setInt(4,TRANS_STATUS);
@@ -398,7 +398,7 @@ private static final Logger LOGGER = LogManager.getLogger(DataMigrationAbabil.cl
        pst3.setDate(2, HOUSE_DT);
        pst3.setBinaryStream(3,null );
        pst3.setBinaryStream(4, null);
-       pst3.setString(5, SL_NO);
+       pst3.setString(5, "111111"+SL_NO);
        pst3.setString(6, BUID);
        pst3.execute();
        pst3.close();
