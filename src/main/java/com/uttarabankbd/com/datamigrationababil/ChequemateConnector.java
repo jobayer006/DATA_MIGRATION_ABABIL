@@ -24,7 +24,7 @@ private static final Logger LOGGER = LogManager.getLogger(ChequemateConnector.cl
 public ChequemateConnector(){
 try{
 
-String chequematedb="jdbc:oracle:thin:chequemate/chequemate@//10.200.227.14:1521/bachdbbkp";
+String chequematedb="jdbc:oracle:thin:chequemate/chequemate@//172.18.100.13:1521/bachdb";
     Class.forName(Driver);
     con=(Connection) DriverManager.getConnection(chequematedb);
     
